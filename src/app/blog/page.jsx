@@ -4,13 +4,10 @@ import Image from 'next/image'
 
 async function getData() {
   // const res = await fetch('http://localhost:3000/api/posts/', {
-  const res = await fetch(
-    'next13lama-44sp4iu4z-heguerack.vercel.app/api/posts/',
-    {
-      // { next: { revalidate: 10 } }
-      cache: 'no-store',
-    }
-  )
+  const res = await fetch('next13lama.vercel.app/api/posts/', {
+    // { next: { revalidate: 10 } }
+    cache: 'no-store',
+  })
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data')
