@@ -29,7 +29,7 @@ export default function DashboardPage() {
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('handledSUbmit jusct ckicked')
+    console.log('handledSubmit jusct ckicked')
     const title = e.target[0].value
     const desc = e.target[1].value
     const image = e.target[2].value
@@ -47,7 +47,7 @@ export default function DashboardPage() {
         }),
       })
       mutate()
-      e.target.reset()
+      e.target.reset
     } catch (error) {
       console.log(error)
     }
