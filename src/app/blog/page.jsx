@@ -13,7 +13,7 @@ async function getData() {
   }
   return res.json()
 }
-
+// jjjjjjjjjjjjjjjjjjjjjjjj
 export default async function BlogPage() {
   const data = await getData()
   console.log(data)
