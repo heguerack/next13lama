@@ -2,7 +2,7 @@
 import { useThemeContext } from '@/lib/context/ThemeContext'
 // import { useContext } from 'react'
 // import { ThemeContext } from '@/utils/context/themeContext'
-import styles from './darkModeToggle.module.css'
+import styles from './darkmodeToggle.module.css'
 
 const DarkModeToggle = () => {
   const { toggle, mode } = useThemeContext()
