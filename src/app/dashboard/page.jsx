@@ -7,7 +7,7 @@ import useSWR, { mutate } from 'swr'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
-export default function dashboardPage() {
+export default function DashboardPage() {
   const router = useRouter()
   const { data: session, status } = useSession()
   console.log(session?.user.name)

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from './page.module.css'
 
-export default function portfolioPage() {
+export default function PortfolioPage() {
   return (
     <div className={styles.container}>
       <h1 className={styles.selectTitle}></h1>

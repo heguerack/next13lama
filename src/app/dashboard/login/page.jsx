@@ -4,7 +4,7 @@ import styles from './page.module.css'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-export default function loginPage({ url }) {
+export default function LoginPage({ url }) {
   const { data: session, status } = useSession()
 
   const router = useRouter()

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Button from '@/components/button/Button'
 
-export default function aboutPage() {
+export default function AboutPage() {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>

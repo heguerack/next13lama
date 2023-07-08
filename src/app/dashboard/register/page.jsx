@@ -4,7 +4,7 @@ import styles from './page.module.css'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
-export default function registerPage() {
+export default function RegisterPage() {
   const [error, setError] = useState(null)
   const router = useRouter()
 

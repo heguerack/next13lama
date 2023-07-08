@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Button from '@/components/button/Button'
 
-export default function contactPage() {
+export default function ContactPage() {
   return (
     <div>
       <h1 className={styles.title}>Lets keep in touch</h1>

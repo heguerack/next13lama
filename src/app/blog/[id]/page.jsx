@@ -15,7 +15,7 @@ async function getData({ id }) {
   }
   return res.json()
 }
-export default async function blogPostpage({ params }) {
+export default async function BlogPostpage({ params }) {
   // const data = await getData(params.id)
   const data = await getData(params)
 

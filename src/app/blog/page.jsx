@@ -14,7 +14,7 @@ async function getData() {
   return res.json()
 }
 
-export default async function blogPage() {
+export default async function BlogPage() {
   const data = await getData()
   console.log(data)
   return (
