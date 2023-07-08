@@ -15,3 +15,17 @@ export const GET = async (request, { params }) => {
     return new NextResponse(error, { status: 500 })
   }
 }
+
+export const DELETE = async (request, { params }) => {
+  const { id } = params
+  console.log(id)
+  try {
+    await connectDB()
+    // const posts = await Post.find(username && { username })
+    const res = await Post.findByIdAndDelete(id)
+    console.log('post deleted')
+    return new NextResponse('Post deleted', { status: 200 })
+  } catch (error) {
+    return new NextResponse(error, { status: 500 })
+  }
+}

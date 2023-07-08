@@ -3,7 +3,8 @@ import styles from './page.module.css'
 import Image from 'next/image'
 
 async function getData() {
-  const res = await fetch('http://localhost:3000/api/posts/', {
+  // const res = await fetch('http://localhost:3000/api/posts/', {
+  const res = await fetch('/api/posts/', {
     // { next: { revalidate: 10 } }
     cache: 'no-store',
   })
@@ -13,7 +14,7 @@ async function getData() {
   }
   return res.json()
 }
-// jjjjjjjjjjjjjjjjjjjjjjjj
+
 export default async function BlogPage() {
   const data = await getData()
   console.log(data)

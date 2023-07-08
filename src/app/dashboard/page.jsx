@@ -47,9 +47,19 @@ export default function DashboardPage() {
         }),
       })
       mutate()
+      e.target.reset()
     } catch (error) {
       console.log(error)
     }
+  }
+
+  const handleDelete = async (id) => {
+    try {
+      await fetch(`/api/posts/${id}`, {
+        method: 'DELETE',
+      })
+      mutate()
+    } catch (error) {}
   }
 
   if (status === 'authenticated') {
@@ -63,7 +73,11 @@ export default function DashboardPage() {
                 <Image src={post.image} alt='effsr' width={200} height={100} />
               </div>
               <h2 className={styles.postTitle}>{post.title}</h2>
-              <span className={styles.delete}>X</span>
+              <span
+                onClick={() => handleDelete(post._id)}
+                className={styles.delete}>
+                X
+              </span>
             </>
           ))}
         </div>
