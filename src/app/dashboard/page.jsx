@@ -47,7 +47,7 @@ export default function DashboardPage() {
         }),
       })
       mutate()
-      e.target.reset
+      e.target.reset()
     } catch (error) {
       console.log(error)
     }
