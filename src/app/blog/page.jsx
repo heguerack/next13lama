@@ -16,24 +16,25 @@ async function getData() {
 }
 
 export default async function BlogPage() {
-  const data = await getData()
-  console.log(data)
-  return (
-    <div className={styles.mainContainer}>
-      {data?.map((blog) => {
-        const { userId, _id: id, title, content, image } = blog
-        return (
-          <Link href={`/blog/${id}`} className={styles.container} key={id}>
-            <div className={styles.imgContainer}>
-              <Image src={image} fill={true} className={styles.img} />
-            </div>
-            <div className={styles.content}>
-              <h1 className={styles.title}>{title}</h1>
-              <p className={styles.desc}>{content}</p>
-            </div>
-          </Link>
-        )
-      })}
-    </div>
-  )
+  return <h1>Im blog</h1>
+  // const data = await getData()
+  // console.log(data)
+  // return (
+  //   <div className={styles.mainContainer}>
+  //     {data?.map((blog) => {
+  //       const { userId, _id: id, title, content, image } = blog
+  //       return (
+  //         <Link href={`/blog/${id}`} className={styles.container} key={id}>
+  //           <div className={styles.imgContainer}>
+  //             <Image src={image} fill={true} className={styles.img} />
+  //           </div>
+  //           <div className={styles.content}>
+  //             <h1 className={styles.title}>{title}</h1>
+  //             <p className={styles.desc}>{content}</p>
+  //           </div>
+  //         </Link>
+  //       )
+  //     })}
+  //   </div>
+  // )
 }
