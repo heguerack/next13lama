@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 async function getData() {
   // const res = await fetch('http://localhost:3000/api/posts/', {
-  const res = await fetch('next13lama.vercel.app/api/posts/', {
+  const res = await fetch('http://localhost:3000/api/posts/', {
     // { next: { revalidate: 10 } }
     cache: 'no-store',
   })
