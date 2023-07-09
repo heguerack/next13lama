@@ -3,7 +3,7 @@ import { useSession, signIn, signOut } from 'next-auth/react'
 
 import { useState, useEffect } from 'react'
 import styles from './page.module.css'
-import useSWR, { mutate } from 'swr'
+import useSWR from 'swr'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
@@ -15,7 +15,7 @@ export default function DashboardPage() {
   // seems like this function can only beclled inside the body on main function
   const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
-  const { data, error, isLoading } = useSWR(
+  const { data, error, isLoading, mutate } = useSWR(
     `/api/posts?username=${session?.user.name}`,
     fetcher
   )
